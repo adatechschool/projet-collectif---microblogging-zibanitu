@@ -15,18 +15,22 @@
     </head>
 
     <body class="bg-dark-blue sans">
-        <a href="/" class="text-sm text-gray-700 dark:text-gray-500 underline">Zibanitu</a>
+        <a href="/" class="text-sm text-gray-700 dark:text-gray-500 underline">
+            <img src="{{ asset('images/logo-miccroblogging.png')}}" alt="Logo">
+        </a>
             
         <div class="flex font-sans text-400">
             <div class="mx-auto max-w-xl mt-20 ">
                 <div class="border-2 border-sky-50/75 p-4 rounded-lg bg-indigo-50">
                     <div>
-                        {{$post->user->name}}
+                        {{$user->name}}
                     </div>
                     <div>
-                        {{$post->description}}
+                        {{$user->biography}}
                     </div>
-                    <img class="" src="{{ $post->img_url }}">
+                    <div>
+                        {{$user->email}}
+                    </div>
                 </div>
             </div>
         </div>
